@@ -1,0 +1,104 @@
+body {
+    background-color: rgba(0, 28, 45, 1);
+}
+
+p, li, h4 {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 0.75rem;
+}
+
+ul{
+    list-style-type: none;
+}
+a:link {
+    text-decoration: none;
+}
+
+a, li {
+    color: rgba(225, 225, 225, 1);
+    text-decoration: underline;
+}
+a:visited {
+    color: rgba(225, 225, 225, 1);
+}
+
+.facebook > p , #lang {
+    color: rgba(225, 225, 225, 1);
+}
+
+#lang {
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.facebook {
+    display: flex;
+    width: 12.221rem;
+    align-items: center;
+    gap: 0.609rem;
+}
+
+.navbar {
+    display: none;
+}
+.navside {
+    display: flex;
+height: 8.813rem;
+flex-direction: column;
+align-items: flex-end;
+gap: 1rem;
+flex-shrink: 0;
+}
+#logo {
+    display: flex;
+justify-content: center;
+align-items: center;
+flex-shrink: 0;
+}
+.mode {
+    background-color: rgba(225, 225, 225, 1);
+    color: rgba(0, 28, 45, 1);
+    text-align: center;
+    font-weight: 400;
+    border-radius: 0.25rem;
+    padding-right: 0.3rem;
+    padding-left: 0.3rem;
+}
+
+#navmobile {
+    display: flex;
+    height:12.375;
+    padding-right: 0.641rem;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 2rem;
+    flex-shrink: 0;
+}
+
+#navbarmob > ul {
+    display: flex;
+    height: 3.125rem;
+    padding: 0.625rem 1.875rem;
+    justify-content: center;
+    align-items: center;
+    gap: 1.5625rem;
+    flex-shrink: 0;
+    border-top: 1px solid var(--Accent, #D61F59);
+    border-bottom: 1px solid var(--Accent, #D61F59);
+    margin-top: 4rem;
+}
+
+#navbarmob > ul > li {
+    display: flex;
+width: 10rem;
+height: 1.875rem;
+flex-direction: row;
+justify-content: center;
+flex-shrink: 0;
+font-size: 2rem;
+font-style: normal;
+font-weight: 600;
+line-height: normal;
+}
+
+
