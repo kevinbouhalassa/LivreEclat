@@ -1,3 +1,10 @@
+:root {
+    --lightblue: rgba(57,107, 181, 1);
+    --red: rgba(214,31,89,1);
+    --white: rgba(225,225,225,1);
+    --darkblue: rgba(0,28,45,1);
+}
+
 body {
     background-color: rgba(0, 28, 45, 1);
 }
@@ -7,6 +14,7 @@ p, li, h4 {
     font-size: 0.75rem;
 }
 
+/* Header */
 ul{
     list-style-type: none;
 }
@@ -51,9 +59,13 @@ flex-shrink: 0;
 }
 #logo {
     display: flex;
-justify-content: center;
-align-items: center;
-flex-shrink: 0;
+    justify-content: center;
+    align-items: center;
+    flex-shrink: 0;
+}
+#logo > img {
+    width: 8rem;
+    height: 8rem;
 }
 .mode {
     background-color: rgba(225, 225, 225, 1);
@@ -99,6 +111,191 @@ font-size: 2rem;
 font-style: normal;
 font-weight: 600;
 line-height: normal;
+}
+
+/* Footer */
+
+#footer{
+    display: flex;
+    padding: 0.3125rem 0.625rem;
+    justify-content: center;
+    gap: 3.875rem;
+    text-align: center;
+    border-top: 2px solid var(--Accent, #D61F59);
+    border-bottom: 2px solid var(--Accent, #D61F59);
+    margin-top: 0.7rem;
+}
+
+#politique > h4 {
+    color: var(--Accent, #D61F59);
+}
+#adresse > h4 {
+    color: var(--Accent, #D61F59);
+}
+
+#politique > p {
+    color: rgba(225, 225, 225, 1);
+}
+#adresse > p {
+    color: rgba(225, 225, 225, 1)
+}
+
+#auteur {
+    display: flex;
+    padding: 1rem;
+    justify-content: center;
+    align-items: center;
+}
+
+#auteur > p {
+    color: rgba(225, 225, 225, 1)
+}
+
+/* principale; Main */
+#promotion > img {
+    position: relative;
+    width: 100%;
+    height: auto;
+    margin: auto;
+    border-radius: 0.3rem;
+}
+
+.img-prom {
+    position: relative;
+    width: 100%;
+    height: auto;
+    margin: auto;
+}
+.previous, .next {
+    cursor: pointer;
+    position: absolute;
+    text-decoration: none;
+    top: 50%;
+    width: auto;
+    margin-top: -22px;
+    padding: 0.4rem;
+    text-align: center;
+    color: var(--white);
+    font-weight: bold;
+    font-size: 1.5rem;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    background-color: var(--darkblue);
+    -webkit-user-select: none;
+    user-select: none;
+}
+
+.next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+
+.previous:hover, .next:hover {
+    background-color: var(--white);
+    color: black;
+}
+
+.fade {
+   animation-name: fade;
+   animation-duration: 1.5s;
+}
+/*#next > p {
+    background-color: var(--lightblue) ;
+    color: rgba(225, 225, 225, 8);
+    padding: 0.5rem;
+    border-radius: 0.5rem;
+    cursor: pointer;
+}
+
+#previous > p {
+    background-color: rgba(57,107, 181, 0.9) ;
+    color: rgba(225, 225, 225, 1);
+    padding: 0.5rem;
+    border-radius: 0.5rem;
+    cursor: pointer;
+}
+
+#btn-img {
+    display: flex;
+    gap: 1rem;
+    justify-content: flex-start;
+}
+
+#next {
+    margin-left: auto;
+}*/
+
+/* barre de recherche */
+
+#searchbar {
+    display: block;
+    margin: 0 auto;
+    border-radius: 0.3rem;
+    padding: 0.5rem;
+}
+
+/* livres */
+
+.boutique {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-left: 0.5rem ;
+    margin-right: 0.5rem;
+    
+}
+.livres {
+    width: 10rem;
+    height: 18rem;
+    flex-shrink: 0;
+    margin-top: 1.2rem;
+    margin-bottom: 8rem;
+}
+
+.titre {
+    display: flex;
+    padding: 1.38rem 0.96rem;
+    justify-content: center;
+    align-items: center;
+    border-radius: 0.6rem 0.6rem 0rem 0rem;
+    background-color: var(--white);
+    color: var(--darkblue);
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    font-size: 70%;
+}
+
+.img-livre {
+    width: 100%;
+    margin: auto;
+}
+
+.Infos > p {
+    color: var(--white);
+    font-weight: 600;
+    font-size: 80%;
+}
+
+.Infos {
+    display: flex ;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.disponibilité {
+    margin-left: auto;
+}
+
+.btnReserver {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 600;
+    font-size: 80%;
+    background-color: var(--lightblue);
+    padding: 0.75rem;
+    border-radius: 0 0 0.3rem 0.3rem;
 }
 
 
