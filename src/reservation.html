@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="fr">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -13,10 +14,12 @@
         <section id="navmobile">
             <section class="nav">
                 <div id="logo">
-                <img src="src/resources/images/LivrÉclat.png" alt="Livre Éclat">
+                    <img src="src/resources/images/LivrÉclat.png" alt="Livre Éclat">
                 </div>
-                <div hidden><h1>Livre Éclat</h1></div>
-                
+                <div hidden>
+                    <h1>Livre Éclat</h1>
+                </div>
+
                 <div class="navbar">
                     <ul>
                         <li><a href="principale.html">Accueil</a></li>
@@ -27,102 +30,83 @@
             <section class="navside">
                 <div class="facebook">
                     <p>Suivez-nous sur Facebook pour connaître les nouveautés et promotions</p>
-                    <a href="principale.html"><img src="src/resources/images/facebook.256x256.png" width="47.43" height="47.43" alt="Lien facebook Livre Éclat" ></a>
-                    </div>
-                    <div id="lang">
+                    <a href="principale.html"><img src="src/resources/images/facebook.256x256.png" width="47.43"
+                            height="47.43" alt="Lien facebook Livre Éclat"></a>
+                </div>
+                <div id="lang">
                     <p>English</p>
-                    </div>
-                    <div class="mode">
-                            <p>Mode Blanc</p>
-                    </div>
-                </section>
-        </section>
-        <section id="navbarmob">
-                <ul>
-                    <li><a href="principale.html">Accueil</a></li>
-                    <li><a href="src/livres.html">Livres</a></li>
-                </ul>
-        </section>
-    </header>
-<main>
-    <section id="barreRecherche">
-            <div id="Recherche">
-                <div id="input">
-                <input title="Tapez ici" type="text">
                 </div>
-                <div id="btnRcherche">
-                    <button type="submit">Recherchez</button>
-                </div>
-            </div>
-    </section>
-
-    <section class="boutique">
-        <section id="pageReservation">
-            <section class="livres">
-                <div class="titre">
-                    <h3>Collection Harry Potter</h3>
-                    </div>
-                        <img src="/src/resources/images/harry-potter-la-collection-complete-1-7.jpg" alt="Harry Potter">
-                    </div>
-                    <div class="Infos">
-                        <p>39.99$</p>
-                        <p>Disponible</p>
-                    </div>
-                    <div class="Synopsis">
-                        <p>Synopsis</p>
-                    </div>
+                <div class="mode">
+                    <p>Mode Blanc</p>
                 </div>
             </section>
-            <div id="resume">
-                <h3>Synopsis</h3>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem, ut veritatis reprehenderit voluptatem 
-                est quos distinctio dolores autem ea dicta tempore, accusantium recusandae tempora velit impedit <br> 
-                deleniti repellat! Cupiditate, blanditiis!</p>
-            </div>
-                <form id="formulaire">
-                    <label for="prenom">Prénom</label>
-                    <input type="text" id="prenom" name="prenom">
-                    <label for="nom">Nom</label>
-                    <input type="text" id="nom" name="nom">
-                    <label for="courriel">Courriel</label>
-                    <input type="text" id="courriel" name="courriel">
-                    <button type="submit" id="envoi" name="envoi">Réservez</button>
-                </form>
-                <div>
-
-                </div>
         </section>
+        <section id="navbarmob">
+            <ul>
+                <li><a href="principale.html">Accueil</a></li>
+                <li><a href="src/livres.html">Livres</a></li>
+            </ul>
+        </section>
+    </header>
+    <main id="pageReservation">
+        <section class="reservation">
+            <div class="livres">
+                <h3 class="titre">Collection Harry Potter</h3>
+                <img class="img-livre" src="/src/resources/images/harry-potter-la-collection-complete-1-7.jpg"
+                    alt="Harry Potter">
+                <div class="Infos">
+                    <p class="prix">39.99$</p>
+                    <p class="disponibilité">Disponible</p>
+                </div>
+                <p class="btnSynopsis">Lire le synopsis</p>
+            </div>
+        </section>
+        <div id="resume">
+            <h3>Synopsis</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem, ut veritatis reprehenderit voluptatem
+                est quos distinctio dolores autem ea dicta tempore, accusantium recusandae tempora velit impedit <br>
+                deleniti repellat! Cupiditate, blanditiis!</p>
+        </div>
     </section>
-</main>
-<footer>
-    <section id="footer">
-        <div id="adresse">
-            <h4>Adresse:</h4>
-            <p>50 rue du blois <br>
-                Montreal, H2T 1P1 
+    <form id="formulaire" action="../src/Confirmation.html">
+        <label for="prenom">Prénom</label>
+        <input type="text" id="prenom" name="prenom">
+        <label for="nom">Nom</label>
+        <input type="text" id="nom" name="nom">
+        <label for="courriel">Courriel</label>
+        <input type="text" id="courriel" name="courriel">
+        <button type="submit" id="envoi" name="envoi">Réservez</button>
+    </form>
+    </main>
+    <footer>
+        <section id="footer">
+            <div id="adresse">
+                <h4>Adresse:</h4>
+                <p>50 rue du blois <br>
+                    Montreal, H2T 1P1
 
                 <h4>Heures d'ouvertures:</h4>
                 <p>Lundi au vendredi de 9h à 20h<br>
-                Samedi et dimanche de 10h à 16h</p>
-                
+                    Samedi et dimanche de 10h à 16h</p>
+
                 <p>514-555-5555 </p>
-                
-               <p><a href="mailto:info@livreeclat.com">info@livreeclat.com</a></p>
+
+                <p><a href="mailto:info@livreeclat.com">info@livreeclat.com</a></p>
             </div>
             <div id="politique">
-            <h4>Politique de remboursement:</h4>
+                <h4>Politique de remboursement:</h4>
 
-                <p>Remboursement ou échange dans les 30 jours suivant l'achat. <br> 
-                Le produit ne doit pas être endommagé.
+                <p>Remboursement ou échange dans les 30 jours suivant l'achat. <br>
+                    Le produit ne doit pas être endommagé.
                 </p>
             </div>
-        
-    </section>
-    <div id="auteur">
+
+        </section>
+        <div id="auteur">
             <p>©Tout droits réservés - Kevin Bouhalassa</p>
         </div>
-</footer>
-<script src="src/resources/javascript/script.js"></script>
+    </footer>
+    <script src="src/resources/javascript/script.js"></script>
 </body>
 </body>
 
