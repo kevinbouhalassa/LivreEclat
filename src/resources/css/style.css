@@ -470,6 +470,10 @@ line-height: normal;
     color: var(--white);
 }
 
+#formulaire > label:required {
+    border-color: red;
+}
+
 #envoi {
     font-family: Arial, Helvetica, sans-serif;
     background-color: var(--lightblue);
@@ -479,9 +483,24 @@ line-height: normal;
     padding: 0.3rem 0.8rem 0.3rem 0.8rem;
     display: block;
     margin: 0 auto;
+    text-align: center;
 
 }
+ 
+.error {
+    border-color: red;
+}
 
+.success {
+    border-color: green;
+}
+.ErrorMessage{
+    color: red;
+    bottom: 0;
+    left: 0;
+    visibility: hidden;
+    font-family: Arial, Helvetica, sans-serif;
+}
 /* page confirmation */
 
 #confirmation{
