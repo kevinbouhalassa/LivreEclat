@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <base href="/Projet_Integrateur_KevinBouhalassa">
+    <base href="http://localhost/coursweb/Projet_Integrateur_KevinBouhalassa/">
     <title>Livre Éclat</title>
     <link rel="stylesheet" href="src/resources/css/style.css">
 </head>
@@ -22,8 +22,8 @@
 
                 <div class="navbar">
                     <ul>
-                        <li><a href="principale.html">Accueil</a></li>
-                        <li><a href="src/livres.html">Livres</a></li>
+                        <li><a href="principale.php">Accueil</a></li>
+                        <li><a href="src/livres.php">Livres</a></li>
                     </ul>
                 </div>
             </section>
@@ -58,93 +58,93 @@
         <section class="boutique">
             <div class="livres">
                 <h3 class="titre">Collection Harry Potter</h3>
-                <img class="img-livre" src="/src/resources/images/harry-potter-la-collection-complete-1-7.jpg"
+                <img class="img-livre" src="./src/resources/images/CollectionHarryPotter.jpg"
                     alt="Harry Potter">
                 <div class="Infos">
                     <p class="prix">39.99$</p>
                     <p class="disponibilité">Disponible</p>
                 </div>
-                 <a class="btnReserver"title="Réservation" href="../src/reservation.html">Cliquez pour réservez</a>
+                 <a class="btnReserver"title="Réservation" href="./src/reservation.php">Cliquez pour réservez</a>
             </div>
             <div class="livres">
                 <h3 class="titre">Collection Harry Potter</h3>
-                <img class="img-livre" src="/src/resources/images/harry-potter-la-collection-complete-1-7.jpg"
+                <img class="img-livre" src="./src/resources/images/CollectionHarryPotter.jpg"
                     alt="Harry Potter">
                 <div class="Infos">
                     <p class="prix">39.99$</p>
                     <p class="disponibilité">Disponible</p>
                 </div>
-                <a class="btnReserver"title="Réservation" href="../src/reservation.html">Cliquez pour réservez</a>
+                <a class="btnReserver"title="Réservation" href="./src/reservation.php">Cliquez pour réservez</a>
             </div>
             <div class="livres">
                 <h3 class="titre">Collection Harry Potter</h3>
-                <img class="img-livre" src="/src/resources/images/harry-potter-la-collection-complete-1-7.jpg"
+                <img class="img-livre" src="./src/resources/images/CollectionHarryPotter.jpg"
                     alt="Harry Potter">
                 <div class="Infos">
                     <p class="prix">39.99$</p>
                     <p class="disponibilité">Disponible</p>
                 </div>
-                <a class="btnReserver"title="Réservation" href="../src/reservation.html">Cliquez pour réservez</a>
+                <a class="btnReserver"title="Réservation" href="./src/reservation.php">Cliquez pour réservez</a>
             </div>
             <div class="livres">
                 <h3 class="titre">Collection Harry Potter</h3>
-                <img class="img-livre" src="/src/resources/images/harry-potter-la-collection-complete-1-7.jpg"
+                <img class="img-livre" src="./src/resources/images/CollectionHarryPotter.jpg"
                     alt="Harry Potter">
                 <div class="Infos">
                     <p class="prix">39.99$</p>
                     <p class="disponibilité">Disponible</p>
                 </div>
-                <a class="btnReserver"title="Réservation" href="../src/reservation.html">Cliquez pour réservez</a>
+                <a class="btnReserver"title="Réservation" href="./src/reservation.php">Cliquez pour réservez</a>
             </div>
             <div class="livres">
                 <h3 class="titre">Collection Harry Potter</h3>
-                <img class="img-livre" src="/src/resources/images/harry-potter-la-collection-complete-1-7.jpg"
+                <img class="img-livre" src="./src/resources/images/CollectionHarryPotter.jpg"
                     alt="Harry Potter">
                 <div class="Infos">
                     <p class="prix">39.99$</p>
                     <p class="disponibilité">Disponible</p>
                 </div>
-                <a class="btnReserver"title="Réservation" href="../src/reservation.html">Cliquez pour réservez</a>
+                <a class="btnReserver"title="Réservation" href="./src/reservation.php">Cliquez pour réservez</a>
             </div>
             <div class="livres">
                 <h3 class="titre">Collection Harry Potter</h3>
-                <img class="img-livre" src="/src/resources/images/harry-potter-la-collection-complete-1-7.jpg"
+                <img class="img-livre" src="./src/resources/images/CollectionHarryPotter.jpg"
                     alt="Harry Potter">
                 <div class="Infos">
                     <p class="prix">39.99$</p>
                     <p class="disponibilité">Disponible</p>
                 </div>
-                <a class="btnReserver"title="Réservation" href="../src/reservation.html">Cliquez pour réservez</a>
+                <a class="btnReserver"title="Réservation" href="./src/reservation.php">Cliquez pour réservez</a>
             </div>
             <div class="livres">
                 <h3 class="titre">Collection Harry Potter</h3>
-                <img class="img-livre" src="/src/resources/images/harry-potter-la-collection-complete-1-7.jpg"
+                <img class="img-livre" src="./src/resources/images/CollectionHarryPotter.jpg"
                     alt="Harry Potter">
                 <div class="Infos">
                     <p class="prix">39.99$</p>
                     <p class="disponibilité">Disponible</p>
                 </div>
-                <a class="btnReserver"title="Réservation" href="../src/reservation.html">Cliquez pour réservez</a>
+                <a class="btnReserver"title="Réservation" href="./src/reservation.php">Cliquez pour réservez</a>
             </div>
             <div class="livres">
                 <h3 class="titre">Collection Harry Potter</h3>
-                <img class="img-livre" src="/src/resources/images/harry-potter-la-collection-complete-1-7.jpg"
+                <img class="img-livre" src="./src/resources/images/CollectionHarryPotter.jpg"
                     alt="Harry Potter">
                 <div class="Infos">
                     <p class="prix">39.99$</p>
                     <p class="disponibilité">Disponible</p>
                 </div>
-                <a class="btnReserver"title="Réservation" href="../src/reservation.html">Cliquez pour réservez</a>
+                <a class="btnReserver"title="Réservation" href="./src/reservation.php">Cliquez pour réservez</a>
             </div>
             <div class="livres">
                 <h3 class="titre">Collection Harry Potter</h3>
-                <img class="img-livre" src="/src/resources/images/harry-potter-la-collection-complete-1-7.jpg"
+                <img class="img-livre" src="./src/resources/images/CollectionHarryPotter.jpg"
                     alt="Harry Potter">
                 <div class="Infos">
                     <p class="prix">39.99$</p>
                     <p class="disponibilité">Disponible</p>
                 </div>
-                <a class="btnReserver"title="Réservation" href="../src/reservation.html">Cliquez pour réservez</a>
+                <a class="btnReserver"title="Réservation" href="./src/reservation.php">Cliquez pour réservez</a>
             </div>
         </section>
     </main>

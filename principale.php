@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <base href="/Projet_Integrateur_KevinBouhalassa">
+    <base href="http://localhost/coursweb/Projet_Integrateur_KevinBouhalassa/">
     <title>Livre Éclat</title>
     <link rel="stylesheet" href="src/resources/css/style.css">
 </head>
@@ -19,8 +19,8 @@
             
             <div class="navbar">
                 <ul>
-                    <li><a href="principale.html">Accueil</a></li>
-                    <li><a href="src/livres.html">Livres</a></li>
+                    <li><a href="principale.php">Accueil</a></li>
+                    <li><a href="src/livres.php">Livres</a></li>
                 </ul>
             </div>
         </section>
@@ -50,7 +50,7 @@
         
         <div class="Slide fade">
             <div id="promotion">
-                <img src="src/resources/images/Harry potter promotion.jpg" alt="Collection Harry Potter">
+                <img src="./src/resources/images/Harry-potter-promotion.jpg" alt="Collection Harry Potter">
             </div>
         </div>
         <a class="previous" onclick="plusSlides(-1)">&#10094;</a>
