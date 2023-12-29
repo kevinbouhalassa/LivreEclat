@@ -14,7 +14,7 @@ class DBController {
 
     function connectDB() {
         try {
-            $pdo = new PDO("sqlite:" . dirname(__DIR__) . DIRECTORY_SEPARATOR . 'database/Livres.sqlite');
+            $pdo = new PDO("sqlite:" . dirname(__DIR__) . DIRECTORY_SEPARATOR . 'database/Livres.db');
             $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION); // pour vérifier s'il y a des erreur
             // si oui il va aller dans le catch
             return $pdo;

@@ -71,7 +71,7 @@ $db_handle = new DBController();
 <?php
 
 $livres = $db_handle->runQuery("SELECT * FROM livres ORDER BY id ASC LIMIT 1,20");
-var_dump($livres)
+var_dump($livres);
 
 ?>
             <div class="livres">
