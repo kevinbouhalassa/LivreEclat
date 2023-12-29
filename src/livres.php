@@ -1,3 +1,14 @@
+<?php
+//echo $_SERVER['DOCUMENT_ROOT'] . DIRECTORY_SEPARATOR . '../app/controller/dbcontroller.php'
+
+//require $_SERVER['DOCUMENT_ROOT'] . DIRECTORY_SEPARATOR . 'C:/Users/Kevin/OneDrive/laragon/www/coursweb/Projet_Integrateur_KevinBouhalassa/app/controller/dbcontroller.php';
+//define('__ROOT__', dirname(dirname(dirname(__DIR__))));
+//require dirname(__DIR__) . 'Projet_Integrateur_KevinBouhalassa\app\controller\dbcontroller.php';
+//require_once(__ROOT__.'./app/controller/dbcontroller.php ');
+
+//$db_handle = new DBController(); 
+
+?>
 <!DOCTYPE html>
 <html lang="fr">
 
@@ -53,9 +64,12 @@
         <input id="searchbar" onkeyup="search_books()" type="text" name="recherche"
             placeholder="Recherchez votre livre">
 
-
-
         <section class="boutique">
+<?php
+
+$livres = $db_handle->runQuery()
+
+?>
             <div class="livres">
                 <h3 class="titre">Collection Harry Potter</h3>
                 <img class="img-livre" src="./src/resources/images/CollectionHarryPotter.jpg"

@@ -1,3 +1,12 @@
+<?php
+
+//
+
+require_once(__DIR__.'/app/controller/dbcontroller.php ');
+
+$db_handle = new DBController();
+
+?>
 <!DOCTYPE html>
 <html lang="fr">
 <head>
