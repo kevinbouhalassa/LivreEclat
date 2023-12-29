@@ -2,7 +2,7 @@
 
 //
 
-require_once(__DIR__.'/app/controller/dbcontroller.php ');
+require(__DIR__.'/app/controller/dbcontroller.php ');
 
 $db_handle = new DBController();
 

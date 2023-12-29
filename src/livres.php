@@ -1,12 +1,15 @@
 <?php
-//echo $_SERVER['DOCUMENT_ROOT'] . DIRECTORY_SEPARATOR . '../app/controller/dbcontroller.php'
+//echo $_SERVER['DOCUMENT_ROOT'] . DIRECTORY_SEPARATOR . '../app/controller/dbcontroller.php';
 
 //require $_SERVER['DOCUMENT_ROOT'] . DIRECTORY_SEPARATOR . 'C:/Users/Kevin/OneDrive/laragon/www/coursweb/Projet_Integrateur_KevinBouhalassa/app/controller/dbcontroller.php';
 //define('__ROOT__', dirname(dirname(dirname(__DIR__))));
 //require dirname(__DIR__) . 'Projet_Integrateur_KevinBouhalassa\app\controller\dbcontroller.php';
 //require_once(__ROOT__.'./app/controller/dbcontroller.php ');
 
-//$db_handle = new DBController(); 
+
+require(__DIR__.'\../app/controller/dbcontroller.php');
+
+$db_handle = new DBController();
 
 ?>
 <!DOCTYPE html>
@@ -67,7 +70,8 @@
         <section class="boutique">
 <?php
 
-$livres = $db_handle->runQuery()
+$livres = $db_handle->runQuery("SELECT * FROM livres ORDER BY id ASC LIMIT 1,20");
+var_dump($livres)
 
 ?>
             <div class="livres">
