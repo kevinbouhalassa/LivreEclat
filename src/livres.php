@@ -70,100 +70,22 @@ $db_handle = new DBController();
         <section class="boutique">
 <?php
 
-$livres = $db_handle->runQuery("SELECT * FROM livres ORDER BY id ASC LIMIT 1,20");
-var_dump($livres);
+$livres = $db_handle->runQuery("SELECT * FROM livres ORDER BY id ASC LIMIT 0,20");
+//var_dump($livres);
 
+foreach ($livres as $livres):
 ?>
             <div class="livres">
-                <h3 class="titre">Collection Harry Potter</h3>
-                <img class="img-livre" src="./src/resources/images/CollectionHarryPotter.jpg"
-                    alt="Harry Potter">
+                <h3 class="titre"><?=$livres['Titre']?></h3>
+                <img class="img-livre" src="./src/resources/images/<?=$livres['NomImage']?>.jpg"
+                    alt="<?=$livres['Titre']?>">
                 <div class="Infos">
-                    <p class="prix">39.99$</p>
-                    <p class="disponibilité">Disponible</p>
+                    <p class="prix"><?=$livres['Prix']?>$</p>
+                    <p class="disponibilité"><?=$livres['Disponibilité']?></p>
                 </div>
                  <a class="btnReserver"title="Réservation" href="./src/reservation.php">Cliquez pour réservez</a>
             </div>
-            <div class="livres">
-                <h3 class="titre">Collection Harry Potter</h3>
-                <img class="img-livre" src="./src/resources/images/CollectionHarryPotter.jpg"
-                    alt="Harry Potter">
-                <div class="Infos">
-                    <p class="prix">39.99$</p>
-                    <p class="disponibilité">Disponible</p>
-                </div>
-                <a class="btnReserver"title="Réservation" href="./src/reservation.php">Cliquez pour réservez</a>
-            </div>
-            <div class="livres">
-                <h3 class="titre">Collection Harry Potter</h3>
-                <img class="img-livre" src="./src/resources/images/CollectionHarryPotter.jpg"
-                    alt="Harry Potter">
-                <div class="Infos">
-                    <p class="prix">39.99$</p>
-                    <p class="disponibilité">Disponible</p>
-                </div>
-                <a class="btnReserver"title="Réservation" href="./src/reservation.php">Cliquez pour réservez</a>
-            </div>
-            <div class="livres">
-                <h3 class="titre">Collection Harry Potter</h3>
-                <img class="img-livre" src="./src/resources/images/CollectionHarryPotter.jpg"
-                    alt="Harry Potter">
-                <div class="Infos">
-                    <p class="prix">39.99$</p>
-                    <p class="disponibilité">Disponible</p>
-                </div>
-                <a class="btnReserver"title="Réservation" href="./src/reservation.php">Cliquez pour réservez</a>
-            </div>
-            <div class="livres">
-                <h3 class="titre">Collection Harry Potter</h3>
-                <img class="img-livre" src="./src/resources/images/CollectionHarryPotter.jpg"
-                    alt="Harry Potter">
-                <div class="Infos">
-                    <p class="prix">39.99$</p>
-                    <p class="disponibilité">Disponible</p>
-                </div>
-                <a class="btnReserver"title="Réservation" href="./src/reservation.php">Cliquez pour réservez</a>
-            </div>
-            <div class="livres">
-                <h3 class="titre">Collection Harry Potter</h3>
-                <img class="img-livre" src="./src/resources/images/CollectionHarryPotter.jpg"
-                    alt="Harry Potter">
-                <div class="Infos">
-                    <p class="prix">39.99$</p>
-                    <p class="disponibilité">Disponible</p>
-                </div>
-                <a class="btnReserver"title="Réservation" href="./src/reservation.php">Cliquez pour réservez</a>
-            </div>
-            <div class="livres">
-                <h3 class="titre">Collection Harry Potter</h3>
-                <img class="img-livre" src="./src/resources/images/CollectionHarryPotter.jpg"
-                    alt="Harry Potter">
-                <div class="Infos">
-                    <p class="prix">39.99$</p>
-                    <p class="disponibilité">Disponible</p>
-                </div>
-                <a class="btnReserver"title="Réservation" href="./src/reservation.php">Cliquez pour réservez</a>
-            </div>
-            <div class="livres">
-                <h3 class="titre">Collection Harry Potter</h3>
-                <img class="img-livre" src="./src/resources/images/CollectionHarryPotter.jpg"
-                    alt="Harry Potter">
-                <div class="Infos">
-                    <p class="prix">39.99$</p>
-                    <p class="disponibilité">Disponible</p>
-                </div>
-                <a class="btnReserver"title="Réservation" href="./src/reservation.php">Cliquez pour réservez</a>
-            </div>
-            <div class="livres">
-                <h3 class="titre">Collection Harry Potter</h3>
-                <img class="img-livre" src="./src/resources/images/CollectionHarryPotter.jpg"
-                    alt="Harry Potter">
-                <div class="Infos">
-                    <p class="prix">39.99$</p>
-                    <p class="disponibilité">Disponible</p>
-                </div>
-                <a class="btnReserver"title="Réservation" href="./src/reservation.php">Cliquez pour réservez</a>
-            </div>
+            <?php endforeach?>
         </section>
     </main>
     <footer>
