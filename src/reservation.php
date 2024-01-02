@@ -1,3 +1,47 @@
+<?php
+
+
+require(__DIR__.'\../app/controller/dbcontroller.php');
+
+$db_handle = new DBController();
+$id = $_GET['pid'];
+$livres = $db_handle->runSingleQuery("SELECT * FROM Livres WHERE id = $id");
+//var_dump($livres);
+
+$erreurs = [];
+ $MsgErreur = '';
+
+ 
+
+
+if(isset($_POST['submit'])){
+    $to = "bouhalassak@gmail.com";
+    $to2 = "info@livreeclat.com";
+    $de = $_POST['courriel']; 
+    $prenom = $_POST['prenom'];
+    $nom = $_POST['nom'];
+    $subject = "Nouvelle réservation";
+    $subject2 = "Confirmation de votre réservation";
+    $message = 'Vous avez reçu une nouvelle réservation pour le livre'. $livres['Titre'] . 'de' . $prenom . $nom ;
+    $message2 = "Merci d'avoir choisi Livre Éclat. Votre livre" . $livres['Titre'] . "est maintenant réservé pour 30 jours.
+    Vous pouvez passer en magasin durant nos heures d'ouvertures afin de pouvoir procéder à l'achat et récupérer votre livre";
+
+    $headers = "From:" . $de;
+    $headers2 = "From:" . $to2;
+    mail($to,$subject,$message,$headers);
+    mail($to2,$subject2,$message2,$headers2); // sends a copy of the message to the sender
+    // You can also use header('Location: thank_you.php'); to redirect to another page.
+    };
+
+    if (mail($to,$subject,$message,$headers)) {
+        echo 'mail sent';
+    } else {
+        echo 'mail failed';
+    } 
+
+
+?>
+</script>
 <!DOCTYPE html>
 <html lang="fr">
 
@@ -51,11 +95,11 @@
     <main id="pageReservation">
         <section class="reservation">
             <div class="livres">
-                <h3 class="titre">Collection Harry Potter</h3>
-                <img class="img-livre" src="./src/resources/images/CollectionHarryPotter.jpg"
-                    alt="Harry Potter">
+                <h3 class="titre"><?=$livres['Titre']?></h3>
+                <img class="img-livre" src="./src/resources/images/<?=$livres['NomImage']?>.jpg"
+                    alt="<?=$livres['Titre']?>">
                 <div class="Infos">
-                    <p class="prix">39.99$</p>
+                    <p class="prix"><?=$livres['Prix']?>$</p>
                     <p class="disponibilité">Disponible</p>
                 </div>
                 <p class="btnSynopsis"></p>
@@ -63,20 +107,19 @@
         </section>
         <div id="resume">
             <h3>Synopsis</h3>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem, ut veritatis reprehenderit voluptatem
-                est quos distinctio dolores autem ea dicta tempore, accusantium recusandae tempora velit impedit <br>
-                deleniti repellat! Cupiditate, blanditiis!</p>
+            <p><?=$livres['Synopsis']?></p>
         </div>
     </section>
-    <form id="formulaire" action="./src/Confirmation.php">
+    <form method="POST" id="formulaire" action="./src/Confirmation.php?pid=<?=$livres["id"]?>">
         <label for="prenom">Prénom</label>
-        <input type="text" id="prenom" name="prenom">
+        <input type="text" id="prenom" name="prenom" required>
         <label for="nom">Nom</label>
-        <input type="text" id="nom" name="nom">
+        <input type="text" id="nom" name="nom" required>
         <label for="courriel">Courriel</label>
-        <input type="text" id="courriel" name="courriel">
+        <input type="email" id="courriel" name="courriel" required>
         <small class="ErrorMessage">Error Message</small>
-        <button type="submit" id="envoi" name="envoi">Réservez</button>
+        <button type="submit" id="envoi" name="Réservez">Réservez</button>
+        <?php echo((!empty($MsgErreur)) ? $MsgErreur : '') ?>
     </form>
     </main>
     <footer>

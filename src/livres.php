@@ -73,17 +73,17 @@ $db_handle = new DBController();
 $livres = $db_handle->runQuery("SELECT * FROM livres ORDER BY id ASC LIMIT 0,20");
 //var_dump($livres);
 
-foreach ($livres as $livres):
+foreach ($livres as $livre):
 ?>
             <div class="livres">
-                <h3 class="titre"><?=$livres['Titre']?></h3>
-                <img class="img-livre" src="./src/resources/images/<?=$livres['NomImage']?>.jpg"
-                    alt="<?=$livres['Titre']?>">
+                <h3 class="titre"><?=$livre['Titre']?></h3>
+                <img class="img-livre" src="./src/resources/images/<?=$livre['NomImage']?>.jpg"
+                    alt="<?=$livre['Titre']?>">
                 <div class="Infos">
-                    <p class="prix"><?=$livres['Prix']?>$</p>
-                    <p class="disponibilité"><?=$livres['Disponibilité']?></p>
+                    <p class="prix"><?=$livre['Prix']?>$</p>
+                    <p class="disponibilité"><?=$livre['Disponibilité']?></p>
                 </div>
-                 <a class="btnReserver"title="Réservation" href="./src/reservation.php">Cliquez pour réservez</a>
+                 <a class="btnReserver"title="Réservation" href="./src/reservation.php?pid=<?=$livre["id"]?>">Cliquez pour réservez</a>
             </div>
             <?php endforeach?>
         </section>

@@ -430,6 +430,12 @@ line-height: normal;
     margin-left: 0.5rem ;
     margin-right: 0.5rem;
 }
+
+
+input:invalid:required {
+    border-color: red;
+}
+
 .btnSynopsis {
     display: flex;
     justify-content: center;

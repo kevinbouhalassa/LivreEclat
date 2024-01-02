@@ -1,3 +1,20 @@
+<?php
+//echo $_SERVER['DOCUMENT_ROOT'] . DIRECTORY_SEPARATOR . '../app/controller/dbcontroller.php';
+
+//require $_SERVER['DOCUMENT_ROOT'] . DIRECTORY_SEPARATOR . 'C:/Users/Kevin/OneDrive/laragon/www/coursweb/Projet_Integrateur_KevinBouhalassa/app/controller/dbcontroller.php';
+//define('__ROOT__', dirname(dirname(dirname(__DIR__))));
+//require dirname(__DIR__) . 'Projet_Integrateur_KevinBouhalassa\app\controller\dbcontroller.php';
+//require_once(__ROOT__.'./app/controller/dbcontroller.php ');
+
+
+require(__DIR__.'\../app/controller/dbcontroller.php');
+
+$db_handle = new DBController();
+$id = $_GET['pid'];
+$livres = $db_handle->runSingleQuery("SELECT * FROM Livres WHERE id = $id");
+//var_dump($livres);
+
+?>
 <!DOCTYPE html>
 <html lang="fr">
 <head>
@@ -47,7 +64,7 @@
     <main>
             <section id="confirmation">
                     <h2>Confirmation réservation</h2>
-                    <p>Merci d'avoir choisi Livre Éclat. Votre livre [nom du livre] est maintenant réservé pour 30 jours. <br> 
+                    <p>Merci d'avoir choisi Livre Éclat. Votre livre <?=$livres['Titre']?> est maintenant réservé pour 30 jours. <br> 
                         Vous pouvez passer en magasin durant nos heures d'ouvertures afin de pouvoir procéder à l'achat et récupérer votre livre</p>
             </section>
     </main>
