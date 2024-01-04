@@ -57,18 +57,20 @@ $db_handle = new DBController();
         </section>
         <section id="navbarmob">
             <ul>
-                <li><a href="principale.html">Accueil</a></li>
-                <li><a href="src/livres.html">Livres</a></li>
+                <li><a href="principale.php">Accueil</a></li>
+                <li><a href="src/livres.php">Livres</a></li>
             </ul>
         </section>
     </header>
     <main>
-
-        <input id="searchbar" onkeyup="search_books()" type="text" name="recherche"
-            placeholder="Recherchez votre livre">
-
+<form action="src/livres.php">
+        <input id="searchbar" type="search" name="recherche"
+        placeholder="Recherchez votre livre">
+        <button id=btnsearch>Recherchez</button>
+    </form>
         <section class="boutique">
 <?php
+
 
 $livres = $db_handle->runQuery("SELECT * FROM livres ORDER BY id ASC LIMIT 0,20");
 //var_dump($livres);

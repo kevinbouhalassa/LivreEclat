@@ -31,7 +31,7 @@ if(isset($_POST['submit'])){
     mail($to,$subject,$message,$headers);
     mail($to2,$subject2,$message2,$headers2); // sends a copy of the message to the sender
     // You can also use header('Location: thank_you.php'); to redirect to another page.
-    };
+    }
 
     if (mail($to,$subject,$message,$headers)) {
         echo 'mail sent';

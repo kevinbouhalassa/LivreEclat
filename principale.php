@@ -27,7 +27,7 @@
         <section class="navside">
             <div class="facebook">
                 <p>Suivez-nous sur Facebook pour connaître les nouveautés et promotions</p>
-                <a href="principale.html"><img src="src/resources/images/facebook.256x256.png" width="47.43" height="47.43" alt="Lien facebook Livre Éclat" ></a>
+                <a href="principale."><img src="src/resources/images/facebook.256x256.png" width="47.43" height="47.43" alt="Lien facebook Livre Éclat" ></a>
                 </div>
                 <div id="lang">
                 <p>English</p>
@@ -39,8 +39,8 @@
     </section>
     <section id="navbarmob">
             <ul>
-                <li><a href="principale.html">Accueil</a></li>
-                <li><a href="src/livres.html">Livres</a></li>
+                <li><a href="principale.php">Accueil</a></li>
+                <li><a href="src/livres.php">Livres</a></li>
             </ul>
     </section>
 </header>
@@ -49,12 +49,22 @@
 
         
         <div class="Slide fade">
-            <div id="promotion">
+            <div class="promotion">
                 <img src="./src/resources/images/Harry-potter-promotion.jpg" alt="Collection Harry Potter">
             </div>
         </div>
-        <a class="previous" onclick="plusSlides(-1)">&#10094;</a>
-        <a class="next" onclick="plusSlides(1)">&#10095;</a>
+        <div class="Slide fade">
+            <div class="promotion">
+                <img src="./src/resources/images/SorceleurSerie.jpg" alt="Collection Harry Potter">
+            </div>
+        </div>
+        <div class="Slide fade">
+            <div class="promotion">
+                <img src="./src/resources/images/VampireDiaries.jpg" alt="Collection Harry Potter">
+            </div>
+        </div>
+        <a class="previous">&#10094;</a>
+        <a class="next">&#10095;</a>
     </div>
 </main>
     <footer>
@@ -85,7 +95,7 @@
                 <p>©Tout droits réservés - Kevin Bouhalassa</p>
             </div>
     </footer>
-    <script src="src/resources/javascript/script.js"></script>
+    <script src="src/resources/javascript/principale.js"></script>
 </body>
 
 </html>
