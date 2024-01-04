@@ -1,11 +1,4 @@
 <?php
-//echo $_SERVER['DOCUMENT_ROOT'] . DIRECTORY_SEPARATOR . '../app/controller/dbcontroller.php';
-
-//require $_SERVER['DOCUMENT_ROOT'] . DIRECTORY_SEPARATOR . 'C:/Users/Kevin/OneDrive/laragon/www/coursweb/Projet_Integrateur_KevinBouhalassa/app/controller/dbcontroller.php';
-//define('__ROOT__', dirname(dirname(dirname(__DIR__))));
-//require dirname(__DIR__) . 'Projet_Integrateur_KevinBouhalassa\app\controller\dbcontroller.php';
-//require_once(__ROOT__.'./app/controller/dbcontroller.php ');
-
 
 require(__DIR__.'\../app/controller/dbcontroller.php');
 
@@ -83,9 +76,20 @@ foreach ($livres as $livre):
                     alt="<?=$livre['Titre']?>">
                 <div class="Infos">
                     <p class="prix"><?=$livre['Prix']?>$</p>
-                    <p class="disponibilité"><?=$livre['Disponibilité']?></p>
+                    <?php 
+                    $reserver = "Réservation";
+                    $detail = "Plus d'infos";
+                    $change = $livre['Disponibilité'];
+                    $output = $reserver;
+
+                    if ($change !== "Disponible") {
+
+                        $output = $detail;
+                    }
+                    ?> 
+                    <p name="disponibilité" class="disponibilité"><?=$livre['Disponibilité']?></p>
                 </div>
-                 <a class="btnReserver"title="Réservation" href="./src/reservation.php?pid=<?=$livre["id"]?>">Cliquez pour réservez</a>
+                 <a class="btnReserver"title="Réservation" href="./src/reservation.php?pid=<?=$livre["id"]?>"><?php echo $output ?></a>
             </div>
             <?php endforeach?>
         </section>
@@ -118,7 +122,7 @@ foreach ($livres as $livre):
             <p>©Tout droits réservés - Kevin Bouhalassa</p>
         </div>
     </footer>
-    <script src="src/resources/javascript/script.js"></script>
+    <script src="src/resources/javascript/.js"></script>
 </body>
 
 

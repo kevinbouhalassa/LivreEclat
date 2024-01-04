@@ -1,5 +1,3 @@
-const courriel = document.getElementById("courriel");
-
 // VALIDATION COURRIEL
 
 courriel.addEventListener("input", (event) => {
@@ -11,7 +9,7 @@ courriel.addEventListener("input", (event) => {
 })
 
 // BARRE DE RECHERCHE
-document.getElementById('btnsearch').addEventListener('click', function () {
+/* document.getElementById('btnsearch').addEventListener('click', function () {
     var searchTerm = document.getElementById('searchbar').value.toLowerCase();
     var livres = document.querySelectorAll('.livres');
     livres.forEach(livre => {
@@ -20,4 +18,6 @@ document.getElementById('btnsearch').addEventListener('click', function () {
             livre.style.display = titre.includes(searchTerm) ? 'block' : 'none';
          } 
     });
-})
+}) */
+
+// CHANGER BOUTON RÉSERVER PAR DETAIL SI != DISPONIBLE
