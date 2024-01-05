@@ -57,10 +57,19 @@ $db_handle = new DBController();
     </header>
     <main>
 <form action="src/livres.php">
-        <input id="searchbar" type="search" name="recherche"
+    <?php 
+    /* $search = "recherche";
+    $livre = "livre";
+    $titre = $livre['Titre'];
+
+    foreach ($titre as $str) {
+
+    } */
+    ?>
+        <input id="searchbar" onkeyup="return search()" type="search" name="recherche"
         placeholder="Recherchez votre livre">
-        <button id=btnsearch>Recherchez</button>
-    </form>
+        <!-- <button id=btnsearch>Recherchez</button> -->
+    
         <section class="boutique">
 <?php
 
@@ -72,7 +81,7 @@ foreach ($livres as $livre):
 ?>
             <div class="livres">
                 <h3 class="titre"><?=$livre['Titre']?></h3>
-                <img class="img-livre" src="./src/resources/images/<?=$livre['NomImage']?>.jpg"
+                <img title="<?=$livre['Titre']?> "class="img-livre" src="./src/resources/images/<?=$livre['NomImage']?>.jpg"
                     alt="<?=$livre['Titre']?>">
                 <div class="Infos">
                     <p class="prix"><?=$livre['Prix']?>$</p>
@@ -122,7 +131,7 @@ foreach ($livres as $livre):
             <p>©Tout droits réservés - Kevin Bouhalassa</p>
         </div>
     </footer>
-    <script src="src/resources/javascript/.js"></script>
+    <script src="src/resources/javascript/livres.js"></script>
 </body>
 
 

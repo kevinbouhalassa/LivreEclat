@@ -100,7 +100,7 @@ if(isset($_POST['submit'])){
                     alt="<?=$livres['Titre']?>">
                 <div class="Infos">
                     <p class="prix"><?=$livres['Prix']?>$</p>
-                    <p class="disponibilité">Disponible</p>
+                    <p class="disponibilité"><?=$livres['Disponibilité']?></p>
                 </div>
                 <p class="btnSynopsis"></p>
             </div>
