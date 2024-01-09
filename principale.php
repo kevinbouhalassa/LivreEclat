@@ -1,4 +1,4 @@
-<?php 
+<?php
 
 include './src/pages/partials/header.php';
 
@@ -6,7 +6,7 @@ include './src/pages/partials/header.php';
 <main>
     <div class="img-prom">
 
-        
+
         <div class="Slide fade">
             <div class="promotion">
                 <img src="./src/resources/images/Harry-potter-promotion.jpg" alt="Collection Harry Potter">
@@ -26,11 +26,12 @@ include './src/pages/partials/header.php';
         <a class="next">&#10095</a>
     </div>
 </main>
-<?php 
+<?php
 
 include './src/pages/partials/footer.php';
 
 ?>
 </body>
 <script src="src/resources/javascript/principale.js"></script>
+
 </html>

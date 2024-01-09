@@ -1,5 +1,6 @@
-<!DOCTYPE >
+<!DOCTYPE html>
 <html lang="fr">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,38 +10,37 @@
 </head>
 
 <body>
-<header >
-    <section id="navmobile">
-        <section class="nav">
-            <div id="logo">
-            <img src="src/resources/images/LivrÉclat.png" alt="Livre Éclat">
+    <header>
+        <div id="navmobile">
+            <div class="nav">
+                <div id="logo">
+                    <img src="src/resources/images/LivrÉclat.png" alt="Livre Éclat">
+                </div>
+
+                <div class="navbar">
+                    <ul>
+                        <li><a href="principale.php">Accueil</a></li>
+                        <li><a href="src/livres.php">Livres</a></li>
+                    </ul>
+                </div>
             </div>
-            <div hidden><h1>Livre Éclat</h1></div>
-            
-            <div class="navbar">
-                <ul>
-                    <li><a href="principale.php">Accueil</a></li>
-                    <li><a href="src/livres.php">Livres</a></li>
-                </ul>
-            </div>
-        </section>
-        <section class="navside">
-            <div class="facebook">
-                <p>Suivez-nous sur Facebook pour connaître les nouveautés et promotions</p>
-                <a href="principale."><img src="src/resources/images/facebook.256x256.png" width="47.43" height="47.43" alt="Lien facebook Livre Éclat" ></a>
+            <div class="navside">
+                <div class="facebook">
+                    <p>Suivez-nous sur Facebook pour connaître les nouveautés et promotions</p>
+                    <a href="principale."><img src="src/resources/images/facebook.256x256.png" width="47" height="47" alt="Lien facebook Livre Éclat"></a>
                 </div>
                 <div id="lang">
-                <p>English</p>
+                    <p>English</p>
                 </div>
                 <div class="mode">
-                        <p>Mode Blanc</p>
+                    <p>Mode Blanc</p>
                 </div>
-            </section>
-    </section>
-    <section id="navbarmob">
+            </div>
+        </div>
+        <div id="navbarmob">
             <ul>
                 <li><a href="principale.php">Accueil</a></li>
                 <li><a href="src/livres.php">Livres</a></li>
             </ul>
-    </section>
-</header>
+        </div>
+    </header>
