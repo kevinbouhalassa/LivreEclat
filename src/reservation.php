@@ -14,7 +14,7 @@ $erreurs = [];
  
 
 
-if(isset($_POST['submit'])){
+/* if(isset($_POST['submit'])){
     $to = "bouhalassak@gmail.com";
     $to2 = "info@livreeclat.com";
     $de = $_POST['courriel']; 
@@ -25,73 +25,26 @@ if(isset($_POST['submit'])){
     $message = 'Vous avez reçu une nouvelle réservation pour le livre'. $livres['Titre'] . 'de' . $prenom . $nom ;
     $message2 = "Merci d'avoir choisi Livre Éclat. Votre livre" . $livres['Titre'] . "est maintenant réservé pour 30 jours.
     Vous pouvez passer en magasin durant nos heures d'ouvertures afin de pouvoir procéder à l'achat et récupérer votre livre";
-
-    $headers = "From:" . $de;
-    $headers2 = "From:" . $to2;
-    mail($to,$subject,$message,$headers);
-    mail($to2,$subject2,$message2,$headers2); // sends a copy of the message to the sender
+    $headers = "MIME-Version: 1.0" . "\r\n";
+$headers .= "Content-type:text/html;charset=UTF-8" . "\r\n";
+    $headers .= "From:" . $de . "\r\n" . "Reply-To:" . $to . "\r\n" . mail($to,$subject,$message,$headers);
+    $headers2 .= "From:" . $to . "\r\n" . "Reply-To:" . $de . "\r\n" . mail($to2,$subject2,$message2,$headers2);
+     // sends a copy of the message to the sender
     // You can also use header('Location: thank_you.php'); to redirect to another page.
+    mail($to,$subject,$message,$headers);
     }
-
-    if (mail($to,$subject,$message,$headers)) {
-        echo 'mail sent';
-    } else {
+    
+     else {
         echo 'mail failed';
-    } 
+    }  */
 
 
 ?>
-</script>
-<!DOCTYPE html>
-<html lang="fr">
+<?php 
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <base href="http://localhost/coursweb/Projet_Integrateur_KevinBouhalassa/">
-    <title>Livre Éclat</title>
-    <link rel="stylesheet" href="src/resources/css/style.css">
-</head>
+include './pages/partials/header.php';
 
-<body>
-    <header>
-        <section id="navmobile">
-            <section class="nav">
-                <div id="logo">
-                    <img src="src/resources/images/LivrÉclat.png" alt="Livre Éclat">
-                </div>
-                <div hidden>
-                    <h1>Livre Éclat</h1>
-                </div>
-
-                <div class="navbar">
-                    <ul>
-                        <li><a href="principale.php">Accueil</a></li>
-                        <li><a href="src/livres.php">Livres</a></li>
-                    </ul>
-                </div>
-            </section>
-            <section class="navside">
-                <div class="facebook">
-                    <p>Suivez-nous sur Facebook pour connaître les nouveautés et promotions</p>
-                    <a href="principale.html"><img src="src/resources/images/facebook.256x256.png" width="47.43"
-                            height="47.43" alt="Lien facebook Livre Éclat"></a>
-                </div>
-                <div id="lang">
-                    <p>English</p>
-                </div>
-                <div class="mode">
-                    <p>Mode Blanc</p>
-                </div>
-            </section>
-        </section>
-        <section id="navbarmob">
-            <ul>
-                <li><a href="principale.php">Accueil</a></li>
-                <li><a href="./src/livres.php">Livres</a></li>
-            </ul>
-        </section>
-    </header>
+?>
     <main id="pageReservation">
         <section class="reservation">
             <div class="livres">
@@ -110,47 +63,39 @@ if(isset($_POST['submit'])){
             <p><?=$livres['Synopsis']?></p>
         </div>
     </section>
-    <form method="POST" id="formulaire" action="./src/Confirmation.php?pid=<?=$livres["id"]?>">
-        <label for="prenom">Prénom</label>
-        <input type="text" id="prenom" name="prenom" required>
-        <label for="nom">Nom</label>
-        <input type="text" id="nom" name="nom" required>
-        <label for="courriel">Courriel</label>
-        <input type="email" id="courriel" name="courriel" required>
-        <small class="ErrorMessage">Error Message</small>
-        <button type="submit" id="envoi" name="Réservez">Réservez</button>
-        <?php echo((!empty($MsgErreur)) ? $MsgErreur : '') ?>
-    </form>
+    <?php 
+    $dispo = $livres['Disponibilité'];
+
+    if ($dispo !== "Disponible") {
+        ?> 
+        <p style="color: red">Malheureusement, ce livre n'est pas disponible pour réservation. <br> <br> Pour plus d'infos, veuillez nous contacter
+            et/ou nous suivre sur facebook pour obtenir les dernières mises à jour.
+        </p>
+        
+    <?php 
+    } else {
+        ?>
+        <form name="formulaire" method="POST" id="formulaire" action="./src/Confirmation.php?pid=<?=$livres["id"]?>">
+            <label for="prenom">Prénom</label>
+            <input type="text" id="prenom" name="prenom" required>
+            <label for="nom">Nom</label>
+            <input type="text" id="nom" name="nom" required>
+            <label for="courriel">Courriel</label>
+            <input type="email" id="courriel" name="courriel" required>
+            <small class="ErrorMessage">Error Message</small>
+            <button type="submit" value="" id="envoi" name="Réservez">Réservez</button>
+        </form>
+    <?php 
+    }
+    ?>
+
     </main>
-    <footer>
-        <section id="footer">
-            <div id="adresse">
-                <h4>Adresse:</h4>
-                <p>50 rue du blois <br>
-                    Montreal, H2T 1P1
+    <?php 
 
-                <h4>Heures d'ouvertures:</h4>
-                <p>Lundi au vendredi de 9h à 20h<br>
-                    Samedi et dimanche de 10h à 16h</p>
+include './pages/partials/footer.php';
 
-                <p>514-555-5555 </p>
-
-                <p><a href="mailto:info@livreeclat.com">info@livreeclat.com</a></p>
-            </div>
-            <div id="politique">
-                <h4>Politique de remboursement:</h4>
-
-                <p>Remboursement ou échange dans les 30 jours suivant l'achat. <br>
-                    Le produit ne doit pas être endommagé.
-                </p>
-            </div>
-
-        </section>
-        <div id="auteur">
-            <p>©Tout droits réservés - Kevin Bouhalassa</p>
-        </div>
-    </footer>
-    <script src="src/resources/javascript/script.js"></script>
+?>
+    <script src="src/resources/javascript/reservation.js"></script>
 </body>
 </body>
 
