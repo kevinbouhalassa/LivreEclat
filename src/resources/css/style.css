@@ -3,6 +3,7 @@
     --red: rgba(214,31,89,1);
     --white: rgba(225,225,225,1);
     --darkblue: rgba(0,28,45,1);
+    --transition: rgba(225,225,225,0.8);
 }
 
 body {
@@ -31,15 +32,12 @@ a:link {
 }
 
 a, li {
-    color: rgba(225, 225, 225, 1);
+    color: var(--white);
     text-decoration: underline;
 }
-a:visited {
-    color: rgba(225, 225, 225, 1);
-}
 
-.facebook > p , #lang {
-    color: rgba(225, 225, 225, 1);
+.change {
+    color: var(--white);
 }
 
 #lang {
@@ -76,7 +74,7 @@ gap: 1rem;
     height: 8rem;
 }
 .mode {
-    background-color: rgba(225, 225, 225, 1);
+    background-color: var(--white);
     color: rgba(0, 28, 45, 1);
     text-align: center;
     font-weight: 400;
@@ -166,6 +164,18 @@ line-height: normal;
         align-items: center;
     }
 
+    .navbar > ul > li > a:hover {
+        background-color: var(--transition) ;
+        color: var(--darkblue);
+        padding: 0.5rem;
+        border-radius: 0.3rem;
+        transition: 0.4s ease-in;
+    }
+
+    li:hover {
+        color: var(--darkblue);
+    }
+
     #navmobile {
         border-bottom: 1px solid var(--red);
         margin: 1rem 0 1rem 0;
@@ -197,22 +207,12 @@ line-height: normal;
     font-family: Arial, Helvetica, sans-serif;
 }
 
-#politique > p {
-    color: rgba(225, 225, 225, 1);
-}
-#adresse > p {
-    color: rgba(225, 225, 225, 1)
-}
 
 #auteur {
     display: flex;
     padding: 1rem;
     justify-content: center;
     align-items: center;
-}
-
-#auteur > p {
-    color: rgba(225, 225, 225, 1)
 }
 
 /* principale; Main */
@@ -333,13 +333,18 @@ line-height: normal;
     margin-bottom: 8rem;
 }
 
+.livres:hover {
+    transform: scale(135%);
+    transition: 0.5s ease-in 0.2s;
+}
+
 .titre {
     display: flex;
     padding: 1.3rem 0.15rem;
     justify-content: center;
     border-radius: 0.6rem 0.6rem 0rem 0rem;
     background-color: var(--white);
-    color: var(--darkblue);
+    color: var(--darkblue); 
     font-family: Arial, Helvetica, sans-serif;
     margin: 0;
     text-align: center;
@@ -348,7 +353,6 @@ line-height: normal;
 
 .img-livre {
     width: 100%;
-    margin: auto;
     height: 225px;
 }
 
@@ -362,6 +366,8 @@ line-height: normal;
     display: flex ;
     justify-content: flex-start;
     align-items: center;
+    padding-left: 0.3rem;
+    padding-right: 0.3rem;
 }
 
 .disponibilité {
@@ -457,13 +463,24 @@ input:invalid:required {
 /*synopsis*/
 #resume {
     align-items: center;
-    border-bottom: 1px solid var(--Accent, #D61F59);
-    border-top: 1px solid var(--Accent, #D61F59);
+    border-bottom: 1px solid var(--red);
+    border-top: 1px solid var(--red);
     margin-bottom: 2rem;
     color: var(--white);
     text-align: center;
     max-width: 50%;
 }
+
+#resume:hover {
+    transform: scale(145%);
+    transition: 0.5s ease-in 0.2s;
+    background-color: var(--darkblue);
+    border-radius: 0.3rem;
+    border-left: 1px solid var(--red);
+    border-right: 1px solid var(--red);
+    padding: 0.3rem;
+}
+
 
 /*formulaire réservation*/
 #formulaire > input {
@@ -519,8 +536,21 @@ input:invalid:required {
 
 #confirmation > h2 {
     text-decoration: underline;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
+/* light mode */
 
+.modenoir{
+    background-color: var(--white);
 
+}
 
+.color {
+    color: black;
+}
+
+.modeblanc {
+    background-color: var(--darkblue);
+    color: var(--white);
+}

@@ -14,33 +14,33 @@
         <div id="navmobile">
             <div class="nav">
                 <div id="logo">
-                    <img src="src/resources/images/LivrÉclat.png" alt="Livre Éclat">
+                    <img id="logoImg"src="src/resources/images/LivrÉclat.png" alt="Livre Éclat">
                 </div>
 
                 <div class="navbar">
-                    <ul>
-                        <li><a href="principale.php">Accueil</a></li>
-                        <li><a href="src/livres.php">Livres</a></li>
+                    <ul  class="change">
+                        <li class="change"><a class="change" href="principale.php">Accueil</a></li>
+                        <li class="change"><a class="change" href="src/livres.php">Livres</a></li>
                     </ul>
                 </div>
             </div>
             <div class="navside">
                 <div class="facebook">
-                    <p>Suivez-nous sur Facebook pour connaître les nouveautés et promotions</p>
+                    <p class="change">Suivez-nous sur Facebook pour connaître les nouveautés et promotions</p>
                     <a href="principale."><img src="src/resources/images/facebook.256x256.png" width="47" height="47" alt="Lien facebook Livre Éclat"></a>
                 </div>
-                <div id="lang">
+                <div class="change" hidden>
                     <p>English</p>
                 </div>
-                <div class="mode">
+                <div class="mode" onclick="return colorToggle()">
                     <p>Mode Blanc</p>
                 </div>
             </div>
         </div>
         <div id="navbarmob">
             <ul>
-                <li><a href="principale.php">Accueil</a></li>
-                <li><a href="src/livres.php">Livres</a></li>
+                <li class="change"><a class="change" href="principale.php">Accueil</a></li>
+                <li class="change"><a class="change"href="src/livres.php">Livres</a></li>
             </ul>
         </div>
     </header>

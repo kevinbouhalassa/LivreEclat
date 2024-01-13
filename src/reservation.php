@@ -57,7 +57,7 @@ include './pages/partials/header.php';
             <p class="btnSynopsis"></p>
         </div>
     </section>
-    <div id="resume">
+    <div id="resume" class="">
         <h3>Synopsis</h3>
         <p><?= $livres['Synopsis'] ?></p>
     </div>
@@ -75,11 +75,11 @@ include './pages/partials/header.php';
     } else {
     ?>
         <form name="formulaire" method="POST" id="formulaire" action="./src/Confirmation.php?pid=<?= $livres["id"] ?>">
-            <label for="prenom">Prénom</label>
+            <label class="" for="prenom">Prénom</label>
             <input type="text" id="prenom" name="prenom" required>
-            <label for="nom">Nom</label>
+            <label class="" for="nom">Nom</label>
             <input type="text" id="nom" name="nom" required>
-            <label for="courriel">Courriel</label>
+            <label class="" for="courriel">Courriel</label>
             <input type="email" id="courriel" name="courriel" required>
             <button type="submit" value="" id="envoi" name="Réservez">Réservez</button>
         </form>

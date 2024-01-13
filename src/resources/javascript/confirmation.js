@@ -1,5 +1,5 @@
 // REDIRECTION À LA BOUTIQUE
-const counter = document.getElementById('counter')
+ const counter = document.getElementById('counter')
 function redirection() {
     if (parseInt(counter.innerHTML) <= 0) {
         location.href = 'src/livres.php';

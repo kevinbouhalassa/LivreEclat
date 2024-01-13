@@ -47,13 +47,13 @@ include './pages/partials/header.php';
             <?php endforeach ?>
         </section>
 </main>
-</body>
 <?php
 
 include './pages/partials/footer.php';
 
 ?>
 <script src="src/resources/javascript/livres.js"></script>
+</body>
 
 
 </html>
