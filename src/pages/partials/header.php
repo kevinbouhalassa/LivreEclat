@@ -3,6 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
+    <meta name="description" content="Vente de livre de tous genre avec la possibilité de réserver le livre directement en ligne.">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <base href="http://localhost/coursweb/Projet_Integrateur_KevinBouhalassa/">
     <title>Livre Éclat</title>
@@ -28,12 +29,6 @@
                 <div class="facebook">
                     <p class="change">Suivez-nous sur Facebook pour connaître les nouveautés et promotions</p>
                     <a href="principale."><img src="src/resources/images/facebook.256x256.png" width="47" height="47" alt="Lien facebook Livre Éclat"></a>
-                </div>
-                <div class="change" hidden>
-                    <p>English</p>
-                </div>
-                <div class="mode" onclick="return colorToggle()">
-                    <p>Mode Blanc</p>
                 </div>
             </div>
         </div>

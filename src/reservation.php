@@ -12,33 +12,6 @@ $erreurs = [];
 $MsgErreur = '';
 
 
-
-
-/* if(isset($_POST['submit'])){
-    $to = "bouhalassak@gmail.com";
-    $to2 = "info@livreeclat.com";
-    $de = $_POST['courriel']; 
-    $prenom = $_POST['prenom'];
-    $nom = $_POST['nom'];
-    $subject = "Nouvelle réservation";
-    $subject2 = "Confirmation de votre réservation";
-    $message = 'Vous avez reçu une nouvelle réservation pour le livre'. $livres['Titre'] . 'de' . $prenom . $nom ;
-    $message2 = "Merci d'avoir choisi Livre Éclat. Votre livre" . $livres['Titre'] . "est maintenant réservé pour 30 jours.
-    Vous pouvez passer en magasin durant nos heures d'ouvertures afin de pouvoir procéder à l'achat et récupérer votre livre";
-    $headers = "MIME-Version: 1.0" . "\r\n";
-$headers .= "Content-type:text/html;charset=UTF-8" . "\r\n";
-    $headers .= "From:" . $de . "\r\n" . "Reply-To:" . $to . "\r\n" . mail($to,$subject,$message,$headers);
-    $headers2 .= "From:" . $to . "\r\n" . "Reply-To:" . $de . "\r\n" . mail($to2,$subject2,$message2,$headers2);
-     // sends a copy of the message to the sender
-    // You can also use header('Location: thank_you.php'); to redirect to another page.
-    mail($to,$subject,$message,$headers);
-    }
-    
-     else {
-        echo 'mail failed';
-    }  */
-
-
 ?>
 <?php
 
@@ -49,7 +22,7 @@ include './pages/partials/header.php';
     <section class="reservation">
         <div class="livres">
             <h3 class="titre"><?= $livres['Titre'] ?></h3>
-            <img class="img-livre" src="./src/resources/images/<?= $livres['NomImage'] ?>.jpg" alt="<?= $livres['Titre'] ?>">
+            <img class="img-livre" src="./src/resources/images/<?= $livres['NomImage'] ?>.webp" alt="<?= $livres['Titre'] ?>">
             <div class="Infos">
                 <p class="prix"><?= $livres['Prix'] ?>$</p>
                 <p class="disponibilité"><?= $livres['Disponibilité'] ?></p>
@@ -74,7 +47,7 @@ include './pages/partials/header.php';
     <?php
     } else {
     ?>
-        <form name="formulaire" method="POST" id="formulaire" action="./src/Confirmation.php?pid=<?= $livres["id"] ?>">
+        <form name="formulaire" method="POST" id="formulaire" action="./src/Confirmation.php?pid=<?= $livres["id"]?>">
             <label class="" for="prenom">Prénom</label>
             <input type="text" id="prenom" name="prenom" required>
             <label class="" for="nom">Nom</label>
@@ -94,7 +67,6 @@ include './pages/partials/footer.php';
 
 ?>
 <script src="src/resources/javascript/reservation.js"></script>
-</body>
 </body>
 
 </html>

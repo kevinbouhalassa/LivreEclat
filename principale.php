@@ -9,17 +9,17 @@ include './src/pages/partials/header.php';
 
         <div class="Slide fade">
             <div class="promotion">
-                <img src="./src/resources/images/Harry-potter-promotion.jpg" alt="Collection Harry Potter">
+                <img src="./src/resources/images/Harry-potter-promotion.webp" alt="Collection Harry Potter">
             </div>
         </div>
         <div class="Slide fade">
             <div class="promotion">
-                <img src="./src/resources/images/SorceleurSerie.jpg" alt="Collection Harry Potter">
+                <img src="./src/resources/images/SorceleurSerie.webp" alt="Collection Harry Potter">
             </div>
         </div>
         <div class="Slide fade">
             <div class="promotion">
-                <img src="./src/resources/images/VampireDiaries.jpg" alt="Collection Harry Potter">
+                <img src="./src/resources/images/VampireDiaries.webp" alt="Collection Harry Potter">
             </div>
         </div>
         <a class="previous">&#10094</a>

@@ -1,9 +1,12 @@
 :root {
-    --lightblue: rgba(57,107, 181, 1);
-    --red: rgba(214,31,89,1);
+    --lightblue: rgba(40,70,131, 1);
+    --red: rgba(9,149,236,1);
     --white: rgba(225,225,225,1);
     --darkblue: rgba(0,28,45,1);
     --transition: rgba(225,225,225,0.8);
+    --blueAAA: rgba(5,174,249,1);
+    --border: rgba(205,14,52,1);
+    --warning: rgba(233,213,79,1);
 }
 
 body {
@@ -40,11 +43,6 @@ a, li {
     color: var(--white);
 }
 
-#lang {
-    text-decoration: underline;
-    cursor: pointer;
-}
-
 .facebook {
     display: flex;
     width: 12.221rem;
@@ -73,16 +71,6 @@ gap: 1rem;
     width: 8rem;
     height: 8rem;
 }
-.mode {
-    background-color: var(--white);
-    color: rgba(0, 28, 45, 1);
-    text-align: center;
-    font-weight: 400;
-    border-radius: 0.25rem;
-    padding-right: 0.3rem;
-    padding-left: 0.3rem;
-    margin-bottom: 0.1rem;
-}
 
 #navmobile {
     display: flex;
@@ -100,8 +88,8 @@ gap: 1rem;
     align-items: center;
     gap: 1.5625rem;
     flex-shrink: 0;
-    border-top: 1px solid var(--Accent, #D61F59);
-    border-bottom: 1px solid var(--Accent, #D61F59);
+    border-top: 1px solid var(--border);
+    border-bottom: 1px solid var(--border);
     margin-top: 4rem;
 }
 
@@ -177,7 +165,7 @@ line-height: normal;
     }
 
     #navmobile {
-        border-bottom: 1px solid var(--red);
+        border-bottom: 1px solid var(--border);
         margin: 1rem 0 1rem 0;
     }
 }
@@ -191,16 +179,16 @@ line-height: normal;
     justify-content: center;
     gap: 3.875rem;
     text-align: center;
-    border-top: 1px solid var(--Accent, #D61F59);
-    border-bottom: 1px solid var(--Accent, #D61F59);
+    border-top: 1px solid var(--border);
+    border-bottom: 1px solid var(--border);
     margin-top: 1rem;
 }
 
 #politique > h4 {
-    color: var(--Accent, #D61F59);
+    color: var(--blueAAA);
 }
 #adresse > h4 {
-    color: var(--Accent, #D61F59);
+    color: var(--blueAAA);
 }
 
 #adresse > a {
@@ -300,6 +288,18 @@ line-height: normal;
 
 /* livres */
 
+
+#warn-box {
+    background-color: var(--warning);
+    color: var(--darkblue);
+    padding: 1rem;
+    text-align: center;
+    margin: auto;
+    border-radius: 0.3rem;
+    margin: 1.5rem 0.5rem 1.5rem;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 13px;
+}
 .boutique {
     display: flex;
     flex-wrap: wrap;
@@ -315,6 +315,11 @@ line-height: normal;
         margin-right: 3rem;
         gap: 2rem;
     }
+
+    #warn-box{
+        margin-left: 3rem;
+        margin-right: 3rem;
+    }
 }
 
 @media screen and (min-width: 1025px) {
@@ -323,6 +328,11 @@ line-height: normal;
         margin-right: 5rem;
         gap: 5rem;
         max-width: 1440px;
+    }
+
+    #warn-box{
+        margin-left: 8rem;
+        margin-right: 8rem;
     }
 }
 .livres {

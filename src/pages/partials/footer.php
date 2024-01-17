@@ -26,4 +26,3 @@
         <p>©Tout droits réservés - Kevin Bouhalassa</p>
     </div>
 </footer>
-<script src="src/resources/javascript/darkmode.js"></script>

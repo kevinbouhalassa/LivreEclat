@@ -11,10 +11,10 @@ include './pages/partials/header.php';
 
 ?>
 <main>
-    <form action="src/livres.php">
-        <input id="searchbar" onkeyup="return search()" type="search" name="recherche" placeholder="Recherchez votre livre">
-        <!-- <button id=btnsearch>Recherchez</button> -->
 
+        <input id="searchbar" onkeyup="return search()" type="search" name="recherche" placeholder="Recherchez votre livre">
+        <p id="warn-box">Notez qu'il n'est pas possible de commander et acheter le livre en ligne, 
+            vous devrez passer en magasin afin de pouvoir procéder au paiement et récupérer le produit que vous aurez réservé</p>
         <section class="boutique">
             <?php
 
@@ -26,7 +26,7 @@ include './pages/partials/header.php';
             ?>
                 <div class="livres">
                     <h3 class="titre"><?= $livre['Titre'] ?></h3>
-                    <img title="<?= $livre['Titre'] ?> " class="img-livre" src="./src/resources/images/<?= $livre['NomImage'] ?>.jpg" alt="<?= $livre['Titre'] ?>">
+                    <img title="<?= $livre['Titre'] ?> " class="img-livre" src="./src/resources/images/<?= $livre['NomImage'] ?>.webp" alt="<?= $livre['Titre'] ?>" width="160" height="225">
                     <div class="Infos">
                         <p class="prix"><?= $livre['Prix'] ?>$</p>
                         <?php
