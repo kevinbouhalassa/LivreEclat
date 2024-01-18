@@ -1,16 +1,10 @@
 <?php
 
-
 require(__DIR__ . '\../app/controller/dbcontroller.php');
 
 $db_handle = new DBController();
 $id = $_GET['pid'];
 $livres = $db_handle->runSingleQuery("SELECT * FROM Livres WHERE id = $id");
-//var_dump($livres);
-
-$erreurs = [];
-$MsgErreur = '';
-
 
 ?>
 <?php
@@ -40,14 +34,13 @@ include './pages/partials/header.php';
 
     if ($dispo !== "Disponible") {
     ?>
-        <p id="dispo" style="color: red">Malheureusement, ce livre n'est pas disponible pour réservation. <br> <br> Pour plus d'infos, <?php  echo '<a href="#adresse">veuillez nous contacter</a>' ?> 
+        <p id="dispo" style="color: red">Malheureusement, ce livre n'est pas disponible pour réservation. <br> <br> Pour plus d'infos, <?php echo '<a href="#adresse">veuillez nous contacter</a>' ?>
             et/ou nous suivre sur facebook pour obtenir les dernières mises à jour.
         </p>
-
     <?php
     } else {
     ?>
-        <form name="formulaire" method="POST" id="formulaire" action="./src/Confirmation.php?pid=<?= $livres["id"]?>">
+        <form name="formulaire" method="POST" id="formulaire" action="./src/Confirmation.php?pid=<?= $livres["id"] ?>">
             <label class="" for="prenom">Prénom</label>
             <input type="text" id="prenom" name="prenom" required>
             <label class="" for="nom">Nom</label>
@@ -59,7 +52,6 @@ include './pages/partials/header.php';
     <?php
     }
     ?>
-
 </main>
 <?php
 

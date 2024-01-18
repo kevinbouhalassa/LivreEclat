@@ -5,8 +5,6 @@ include './src/pages/partials/header.php';
 ?>
 <main>
     <div class="img-prom">
-
-
         <div class="Slide fade">
             <div class="promotion">
                 <img src="./src/resources/images/Harry-potter-promotion.webp" alt="Collection Harry Potter">
@@ -35,3 +33,5 @@ include './src/pages/partials/footer.php';
 <script src="src/resources/javascript/principale.js"></script>
 
 </html>
+
+        
